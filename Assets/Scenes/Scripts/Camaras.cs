@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Camara : MonoBehaviour
+public class Camaras : MonoBehaviour
 {
     public Transform target;
 

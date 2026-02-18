@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 1389587}
   - component: {fileID: 1389586}
   - component: {fileID: 1389588}
+  - component: {fileID: 1389589}
   m_Layer: 0
   m_Name: player-idle-1
   m_TagString: Untagged
@@ -330,6 +331,28 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1389589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b7896f80b23a714390c857fc7e21afb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jugador
+  velocidad: 2
+  puntoDeInicio: {fileID: 1495692284}
+  fuerzaSalto: 4
+  layerSuelo:
+    serializedVersion: 2
+    m_Bits: 64
+  compruebaSuelo: {fileID: 156439656}
+  audioSource: {fileID: 1826054536}
+  getRecolectar: {fileID: 8300000, guid: d6945231be24c7240a281458fc849e1f, type: 3}
+  sonidoMuerto: {fileID: 0}
 --- !u!1 &24926105
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,6 +889,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 664a7bdf79df3ce4a823b8020c8b75e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  target: {fileID: 1389585}
+  yOffset: 0
 --- !u!1 &300392473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,6 +1243,7 @@ GameObject:
   - component: {fileID: 721856458}
   - component: {fileID: 721856457}
   - component: {fileID: 721856456}
+  - component: {fileID: 721856459}
   m_Layer: 0
   m_Name: slug-1
   m_TagString: Enemigo
@@ -1320,6 +1346,43 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &721856459
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721856455}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.32, y: 0.21}
+  m_Direction: 0
 --- !u!1 &731705838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,6 +1394,7 @@ GameObject:
   - component: {fileID: 731705841}
   - component: {fileID: 731705840}
   - component: {fileID: 731705839}
+  - component: {fileID: 731705842}
   m_Layer: 0
   m_Name: bee-1
   m_TagString: Enemigo
@@ -1433,6 +1497,43 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &731705842
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731705838}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.37, y: 0.39}
+  m_Direction: 0
 --- !u!1 &811409395
 GameObject:
   m_ObjectHideFlags: 0
@@ -52153,6 +52254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1677728888}
+  - component: {fileID: 1677728889}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -52175,6 +52277,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1677728889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677728887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24860aa576e6e024eb11a5ac02e20700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  textoNumeroPuntos: {fileID: 0}
+  textoVidas: {fileID: 0}
 --- !u!1 &1764806575
 GameObject:
   m_ObjectHideFlags: 0

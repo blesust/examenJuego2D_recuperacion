@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public TMP_Text textoNumeroPuntos;
     public TMP_Text textoVidas;
 
-    private int puntos = ;
+    private int puntos = 0;
     private int vidas = 2;
 
     void Start()
