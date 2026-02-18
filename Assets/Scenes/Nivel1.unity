@@ -52289,8 +52289,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24860aa576e6e024eb11a5ac02e20700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  textoNumeroPuntos: {fileID: 0}
-  textoVidas: {fileID: 0}
+  textoNumeroPuntos: {fileID: 573818427}
+  textoVidas: {fileID: 191262168}
 --- !u!1 &1764806575
 GameObject:
   m_ObjectHideFlags: 0
