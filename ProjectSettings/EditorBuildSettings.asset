@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Victoria.unity
     guid: ebda669c9630ee84dbe80b589e63e300
+  - enabled: 1
+    path: Assets/Scenes/Derrota.unity
+    guid: abe2ad967ce5ed14cb3caebb67739260
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   m_UseUCBPForAssetBundles: 0
